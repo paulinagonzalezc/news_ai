@@ -9,6 +9,7 @@ const alanKey =
 
 const App = () => {
   const [newsArticles, setNewsArticles] = useState([]);
+  const [activeArticle, setActiveArticle] = useState(-1);
   const classes = useStyles();
 
   useEffect(() => {
@@ -17,7 +18,9 @@ const App = () => {
       onCommand: ({command, articles}) => {
         if (command === 'newHeadlines') {
           setNewsArticles(articles);
-          console.log(articles);
+          setActiveArticle(-1);
+        } else if (command === 'highlight') {
+          setActiveArticle((prevActiveArticle) => prevActiveArticle + 1);
         }
       },
     });
@@ -32,7 +35,7 @@ const App = () => {
           alt="alan logo"
         />
       </div>
-      <NewsCards articles={newsArticles} />
+      <NewsCards articles={newsArticles} activeArticle={activeArticle} />
     </div>
   );
 };
