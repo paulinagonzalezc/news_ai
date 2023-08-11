@@ -19,6 +19,7 @@ const NewsCard = ({
 }) => {
   const classes = useStyles();
   const [elRefs, setElRefs] = useState([]);
+  const scrollToRef = (ref) => window.scroll(0, ref.current.offsetTop - 50);
 
   useEffect(() => {
     setElRefs((refs) =>
@@ -28,10 +29,15 @@ const NewsCard = ({
     );
   }, []);
 
-  useEffect(() => {}, [i, activeArticle, elRefs]);
+  useEffect(() => {
+    if (i === activeArticle && elRefs[activeArticle]) {
+      scrollToRef(elRefs[activeArticle]);
+    }
+  }, [i, activeArticle, elRefs]);
 
   return (
     <Card
+      ref={elRefs[i]}
       className={classNames(
         classes.card,
         activeArticle === i ? classes.activeCard : null,
