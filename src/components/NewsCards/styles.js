@@ -17,6 +17,7 @@ const styles = makeStyles({
     padding: '10%',
     borderRadius: 10,
     color: 'white',
+    boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
   },
 
   infoCard: {

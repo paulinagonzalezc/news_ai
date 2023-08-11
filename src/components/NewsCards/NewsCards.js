@@ -26,7 +26,7 @@ const infoCards = [
   },
 ];
 
-export const NewsCards = ({articles}) => {
+export const NewsCards = ({articles, activeArticle}) => {
   const classes = useStyles();
 
   if (!articles.length) {
@@ -53,13 +53,16 @@ export const NewsCards = ({articles}) => {
               >
                 <Typography variant="h5">{infoCard.title}</Typography>
                 {infoCard.info ? (
-                  <Typography variant="h6">
+                  <Typography
+                    variant="h6"
+                    style={{fontWeight: 100, fontSize: '1.12rem'}}
+                  >
                     <strong>{infoCard.title.split(' ')[2]}:</strong>
                     <br />
                     {infoCard.info}
                   </Typography>
                 ) : null}
-                <Typography variant="h6">
+                <Typography variant="h6" style={{fontWeight: 100}}>
                   Try saying: <br />
                   <i>{infoCard.text}</i>
                 </Typography>
@@ -81,7 +84,7 @@ export const NewsCards = ({articles}) => {
       >
         {articles.map((article, i) => (
           <Grid item xs={12} sm={6} md={4} lg={3} style={{display: 'flex'}}>
-            <NewsCard article={article} i={i} />
+            <NewsCard article={article} activeArticle={activeArticle} i={i} />
           </Grid>
         ))}
       </Grid>
