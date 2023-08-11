@@ -24,7 +24,7 @@
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
 
-# 📖 My Blog App <a name="about-project"></a>
+# News AI App <a name="about-project"></a>
 
 An Artificial Intelligence React News Application using Alan AI. Alan AI is a revolutionary speech recognition software that allows you to add voice capabilities to your applications. It allows you to control the app using your voice. The App also uses News API to get the news to the front end.
 
@@ -67,8 +67,6 @@ Clone this repository to your desired folder:
   git clone  https://github.com/paulinagonzalezc/news_ai
 ```
 
--
-
 ### Install
 
 Install this project with:
@@ -78,8 +76,6 @@ Install this project with:
   npm install
 ```
 
--
-
 ### Usage
 
 To run the project, execute the following command:
@@ -87,8 +83,6 @@ To run the project, execute the following command:
 ```sh
   npm start
 ```
-
--
 
 ### Run tests
 
@@ -100,7 +94,7 @@ To run tests, run the following command:
 
 ## Live Demo
 
-https://paulinagonzalezc.github.io/
+https://news-ai-3m0o.onrender.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
